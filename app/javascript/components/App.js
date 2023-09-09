@@ -12,9 +12,6 @@ function App() {
           <Route path="greeting" element={<Greeting />} />
         </Routes>
       </div>
-      {/* <h1>Greetings</h1>
-      <Home />
-      <Greeting /> */}
     </div>
   );
 }

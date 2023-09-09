@@ -1,11 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const getRandomGreeting = createAsyncThunk(
-  'greeting/random',
+  'greeting/randomGreeting',
   async () => {
     const res = await fetch('/random_greeting');
     const data = await res.json();
-    console.log(data);
     return data.greeting;
   }
 );
@@ -14,7 +13,7 @@ const initialState = {
   message: '',
 };
 
-const greetingSlice = createSlice({
+export const greetingSlice = createSlice({
   name: 'greeting',
   initialState,
   extraReducers(builder) {
