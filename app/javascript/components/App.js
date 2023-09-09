@@ -1,21 +1,20 @@
 import React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Greeting from './Greeting';
+import Home from './Home';
 
 function App() {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<Greeting />} />
-      </Routes>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="greeting" element={<Greeting />} />
+        </Routes>
+      </div>
+      {/* <h1>Greetings</h1>
+      <Home />
+      <Greeting /> */}
     </div>
   );
 }

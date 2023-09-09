@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const getRandomGreeting = createAsyncThunk(
   'greeting/random',
   async () => {
-    const res = await fetch('/greeting.json');
+    const res = await fetch('/random_greeting');
     const data = await res.json();
     console.log(data);
     return data.greeting;
